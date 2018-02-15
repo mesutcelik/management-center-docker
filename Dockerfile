@@ -6,7 +6,7 @@ VOLUME ["/data"]
 
 RUN mkdir -p $MC_HOME
 WORKDIR $MC_HOME
-ADD http://download.hazelcast.com/management-center/management-center-$MC_VERSION.zip $MC_HOME/mancenter.zip
+ADD mancenter-3.9.3-SNAPSHOT.zip $MC_HOME/mancenter.zip
 RUN unzip mancenter.zip
 ### Start Management Center standalone server.
 COPY start.sh .
